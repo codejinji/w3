@@ -122,3 +122,12 @@ SIMPLEUI_ANALYSIS = False
 
 # Verify robots settings
 PUB_KEY = 'AAAAB3NzaC1yc2EAAAADAQABAAABgQDJLp+oasxHZ0QUkvD++HY6GGXiEWB1yIZ+GPpxbggjiqfiZlX5Bj5ui2UaIh0ZMmesFSVWBhmpeNKXXXbtE6tJ9x6GRG6kajLeUp03cIpZiOboQu2zdMVRqUgie+DZAgPCNyHSMpVJfH3SEGQXZqogQGcAxXBguRIl5EQsvxkKqQqLsccWotL5oZQ28NCTUI0TvBfRyZPYjxPnej8Z6M110NTQv9SJqfbxlrrM9myRGViSzwKG9W0qPWH0jCFjxkT17CaIpflXV+jvL6ZfOXssFHbHp7jTL3u0L/G7Ub8FQPlS7GAclNjNkRCZAEzzUD2c8+3VWu8/0+/ymzrkllBaRFjApOJD0EpysMOCIaE0mXYO7MczM5hizcdI8aIw3uJGQMbvL+hqphmZ9Zc1CTAvX43irsEomWDDUI158JmiRfsjFF6rvFBoI5AFpGpq0ZUYMwNFHxGX5GT/RFecYgiqvVbjjEAKQ81iCUeAfJCyeMZkl2rwfKrVoIiCZ+lrTW8= colin_x9q2bw1@colin'
+
+# Heroku settings.
+import django_heroku
+django_heroku.settings(locals())
+
+if os.environ.get('DEBUG') == 'TRUE':
+    DEBUG = True
+elif os.environ.get('DEBUG') == 'FALSE':
+    DEBUG = False
