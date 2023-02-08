@@ -1,0 +1,1 @@
+web: gunicorn nscript.wsgi --log-file -
